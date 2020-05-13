@@ -4,7 +4,10 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 export default {
     title: 'Newsletter',
-    component: Newsletter,
+    parameters: {
+        component: Newsletter,
+        componentSubtitle: 'Displays a Newsletter Subscription Form.',
+    }
   };
 
 export const mytest = () => (

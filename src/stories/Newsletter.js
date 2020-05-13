@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { action } from '@storybook/addon-actions';
 
-// TODO: Nonce will be required by business logic
-// consider output to localized window var
+/**
+- Use a Newsletter block to create a simple subscribe connection.
+**/
 export const Newsletter = ( props) => {
     const {
         icon,
@@ -41,3 +43,38 @@ export const Newsletter = ( props) => {
         </div>
     );
 };
+
+Newsletter.propTypes = {
+    /**
+     The icon
+     */
+    icon: PropTypes.string
+    /**
+     The title
+     */   
+    title: PropTypes.string,
+    /**
+     The subtitle
+     */   
+    subtitle: PropTypes.string,
+    /**
+     The segment ID
+     */   
+    segment: PropTypes.string,
+    /**
+     The input placeholder
+     */   
+    placeholder: PropTypes.string,
+    /**
+     The button label
+     */   
+    label: PropTypes.string,
+    /**
+     The label when fetching data
+     */   
+    loading: PropTypes.string,
+    /**
+     The confirmation message
+     */   
+    confirmation: PropTypes.string,
+}
