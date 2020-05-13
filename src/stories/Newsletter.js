@@ -48,7 +48,7 @@ Newsletter.propTypes = {
     /**
      The icon
      */
-    icon: PropTypes.string
+    icon: PropTypes.string,
     /**
      The title
      */   
