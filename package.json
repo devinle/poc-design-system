@@ -1,7 +1,7 @@
 {
   "name": "poc-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -52,5 +52,10 @@
     "@storybook/react": "^5.3.18",
     "chromatic": "^4.0.2",
     "cross-env": "^7.0.2"
-  }
+  },
+  "description": "A POC using Storybook as a Design System Base",
+  "main": "dist/index.js",
+  "repository": "git@github.com:devinle/poc-design-system.git",
+  "author": "Devin Leggett <devin.leggett@gmail.com>",
+  "license": "MIT"
 }
