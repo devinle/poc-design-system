@@ -1,3 +1,17 @@
+# v0.1.4 (Thu May 14 2020)
+
+#### ⚠️  Pushed to `master`
+
+- Added required styles (devin.leggett@paycase.com)
+- Merge branch 'master' of github.com:devinle/poc-design-system (devin.leggett@paycase.com)
+- Added global styles (devin.leggett@paycase.com)
+
+#### Authors: 1
+
+- Devin Leggett (devin.leggett@paycase.com)
+
+---
+
 # v0.1.3 (Thu May 14 2020)
 
 #### ⚠️  Pushed to `master`
