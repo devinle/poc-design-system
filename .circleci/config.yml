@@ -13,10 +13,10 @@ jobs:
             - run: npm test
             - run: npx chromatic --project-token=eqp57mm70cj --exit-zero-on-changes
             - run: |
-              if [ $CIRCLE_BRANCH = "master" ]
-              then
-                yarn release
-              fi
+                if [ $CIRCLE_BRANCH = "master" ]
+                then
+                  yarn release
+                fi
 workflows:
     build-and-test:
       jobs:
