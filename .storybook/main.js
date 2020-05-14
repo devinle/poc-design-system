@@ -1,3 +1,5 @@
+const postcssNesting = require('postcss-nesting');
+
 module.exports = {
   stories: ['../src/Intro.stories.mdx', '../src/**/*.stories.(js|mdx)'],
   addons: [
