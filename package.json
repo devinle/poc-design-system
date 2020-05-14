@@ -57,7 +57,8 @@
     "@storybook/react": "^5.3.18",
     "auto": "^9.32.0",
     "chromatic": "^4.0.2",
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "webpack-cli": "^3.3.11"
   },
   "description": "A POC using Storybook as a Design System Base",
   "main": "dist/index.js",

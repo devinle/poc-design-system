@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { action } from '@storybook/addon-actions';
+import './Newsletter.css';
 
 /**
 - Use a Newsletter block to create a simple subscribe connection.
