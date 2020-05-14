@@ -14,4 +14,20 @@ module.exports = {
         },
     },
   ],
+  webpackFinal: ( config, { configType } ) => {
+    config.module.rules.push(          
+        { 
+            test: /\.css$/,
+            loader: 'postcss-loader', 
+            options: {
+                ident: 'postcss',
+                plugins: () => [
+                    postcssNesting()
+                ]
+            },
+        },
+    );
+
+    return config;
+  },
 };
