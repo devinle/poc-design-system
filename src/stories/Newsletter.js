@@ -18,7 +18,7 @@ export const Newsletter = ( props) => {
     } = props;
 
     return (
-        <div>
+        <div className="newsletter-signup">
             <div className="newsletter-signup__header">
                 <div className="newsletter-signup__icon">
                     {icon}

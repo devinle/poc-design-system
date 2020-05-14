@@ -1,4 +1,453 @@
-/** Test **/
-body {
-    background-color: #e6e6e6;
+.newsletter-signup {
+	background-color: var(--c-blue-grey-100);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	& .newsletter-signup__header {
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	& .newsletter-signup__confirmation {
+		padding: 1rem 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	& .newsletter-signup__icon {
+
+		& svg {
+			fill: var(--c-grey-blue-700);
+			height: 27px;
+			width: 35px;
+
+			@media (--bp-medium) {
+				height: 38px;
+				width: 50px;
+			}
+		}
+	}
+
+	& .newsletter-signup__title {
+		color: var(--c-grey-blue-700);
+		font-weight: var(--font-weight-book);
+		line-height: 1.33;
+
+		@media (--bp-medium) {
+			font-size: 2rem;
+		}
+	}
+
+	& .newsletter-signup__subtitle {
+		color: var(--c-grey-blue-700);
+		font-size: 1rem;
+		font-weight: var(--font-weight-normal);
+		line-height: 1.625;
+		margin-bottom: 0;
+	}
+
+	& .newsletter-signup__form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+
+		@media (--bp-medium) {
+			width: auto;
+		}
+	}
+
+	& .newsletter-signup__input {
+		margin-bottom: 0.75rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	& .newsletter-signup__button {
+		border: none;
+		font-size: 1rem;
+		justify-content: center;
+		line-height: 1.625;
+		width: 100%;
+	}
+}
+
+/* Footer Version  */
+.newsletter-signup--footer {
+	flex-direction: column;
+	justify-content: center;
+	padding: 3.75rem 2rem 2rem;
+
+	@media (--bp-medium) {
+		padding: 5rem 2rem 5.5rem;
+	}
+
+	& .newsletter-signup__header {
+		margin-bottom: 1.5rem;
+
+		@media (--bp-medium) {
+			margin: 0 auto 1.5rem;
+			max-width: 49rem;
+		}
+	}
+
+	& .newsletter-signup__icon {
+		display: none;
+	}
+
+	& .newsletter-signup__form {
+
+		@media (--bp-medium) {
+			align-items: center;
+		}
+	}
+
+	& .newsletter-signup__input {
+		text-align: left;
+
+		@media (--bp-medium) {
+			margin-bottom: 0;
+			margin-right: 1rem;
+			max-width: 24rem;
+		}
+	}
+
+	& .newsletter-signup__button {
+
+		@media (--bp-medium) {
+			max-width: 9rem;
+		}
+	}
+}
+
+/* Banner Version - used on Archives and Single Article  */
+
+.newsletter-signup--banner {
+	align-items: center;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(37, 94, 158, 0.08);
+	margin: var(--spacing-3) 0;
+	padding: var(--spacing-2pt5) var(--spacing-1pt5);
+
+	@media (--bp-large-custom) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	& .newsletter-signup__icon {
+		display: none;
+	}
+
+	& .newsletter-signup__header {
+
+		@media (--bp-large-custom) {
+			margin-bottom: 0;
+			padding-right: 2rem;
+			text-align: left;
+			width: 68%;
+		}
+	}
+
+	& .newsletter-signup__title {
+		font-weight: var(--font-weight-semi-bold);
+	}
+
+	& .newsletter-signup__subtitle {
+		font-size: 0.8rem;
+	}
+
+	& .newsletter-signup__form {
+		display: inline-block;
+	}
+}
+
+/* Social Version - appears as a box, includes social links  */
+.newsletter-signup--social {
+	background: linear-gradient(0deg, #f4f6f9, #f4f6f9), #102f5e;
+	border: 1px solid var(--c-blue-grey-300);
+	box-shadow: 0 0.5rem 32px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(37, 94, 158, 0.08);
+	box-sizing: border-box;
+	flex-direction: column;
+	max-width: 23.5rem;
+	padding: 3.75rem 2rem 2rem;
+	position: relative; /* For IE 11 to overlap the next row */
+
+	& .newsletter-signup__icon {
+		margin-bottom: 1rem;
+	}
+
+	& .newsletter-signup__social-text {
+		font-size: 1.25rem;
+		font-weight: var(--font-weight-book);
+		line-height: 1.33;
+		margin-bottom: 0;
+		margin-top: 2.5rem;
+		text-align: center;
+	}
+
+	& .newsletter-signup__social-text-follow {
+		font-size: 1rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	& .social-nav {
+		justify-content: center;
+	}
+
+	@media (--bp-large-custom) {
+		max-width: 100%;
+	}
+}
+
+/* Sticky Version - sticky on bottom of page  */
+.newsletter-signup--sticky {
+	bottom: 0;
+	left: 0;
+	padding: 1.5rem;
+	position: fixed;
+	right: 0;
+	z-index: 5;
+
+	@media (--bp-medium) {
+		flex-wrap: nowrap;
+		justify-content: center;
+		padding: 1.5rem;
+	}
+
+	& .newsletter-signup__icon {
+		display: none;
+	}
+
+	& .newsletter-signup__header {
+
+		@media (--bp-medium) {
+			margin-bottom: 0;
+			margin-right: 3rem;
+			max-width: 40rem;
+			text-align: left;
+		}
+	}
+
+	& .newsletter-signup__form {
+
+		@media (--bp-medium) {
+			align-items: center;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			max-width: 24rem;
+		}
+	}
+
+	& .newsletter-signup__input {
+
+		@media (--bp-medium) {
+			margin-bottom: 0;
+			margin-right: 0.75rem;
+		}
+	}
+
+	& .newsletter-signup__button {
+
+		@media (--bp-medium) {
+			max-width: 9rem;
+		}
+	}
+
+	& .newsletter-signup__icon-close {
+		padding: 0;
+		position: absolute;
+		right: 0.75rem;
+		top: 0.75rem;
+		z-index: 6;
+
+		& svg {
+			fill: var(--c-salesforce-blue);
+			height: 1.25rem;
+			width: 1.25rem;
+		}
+	}
+}
+
+.newsletter-signup--fullbanner {
+	border: 1px solid var(--c-blue-grey-300);
+	border-radius: var(--border-radius);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(37, 94, 158, 0.08);
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: var(--spacing-2) var(--spacing-1pt5);
+	position: relative;
+	z-index: 1;
+
+	@media (--bp-medium) {
+		margin-top: -60px;
+	}
+
+	@media (--bp-large-custom) {
+		padding-left: var(--spacing-2pt5);
+		padding-right: var(--spacing-2pt5);
+	}
+
+	& .newsletter-signup__icon {
+
+		@media (--bp-large) {
+			height: 27px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 35px;
+		}
+
+		& svg {
+			height: 37px;
+			margin-bottom: var(--spacing-pt75);
+			width: 50px;
+
+			@media (--bp-large) {
+				height: 27px;
+				margin-bottom: 0;
+				margin-top: 0.3rem;
+				width: 35px;
+			}
+		}
+	}
+
+	& .newsletter-signup__header {
+		position: relative;
+
+		@media (--bp-large) {
+			margin-bottom: 0;
+			padding-left: calc((var(--base-spacing) * 2) + 35px);
+			padding-right: var(--spacing-3);
+			text-align: left;
+			width: 50%;
+		}
+	}
+
+	& .newsletter-signup__title {
+		font-size: var(--small-heading-3-font-size);
+		font-weight: var(--font-weight-normal);
+		line-height: var(--small-heading-3-line-height);
+		margin: 0 0 var(--base-spacing);
+
+		@media (--bp-large) {
+			font-size: var(--small-heading-5-font-size);
+			line-height: var(--small-heading-5-line-height);
+		}
+	}
+
+	& .newsletter-signup__subtitle {
+		font-size: var(--body-alt-font-size);
+		line-height: var(--body-alt-line-height);
+	}
+
+	& .newsletter-signup__form {
+		width: 100%;
+
+		@media (--bp-medium) {
+			align-items: center;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+		}
+
+		@media (--bp-large) {
+			width: 50%;
+		}
+	}
+
+	& .newsletter-signup__input {
+
+		@media (--bp-medium) {
+			margin-bottom: 0;
+			margin-right: 0.75rem;
+		}
+	}
+
+	& .newsletter-signup__button {
+
+		@media (--bp-medium) {
+			max-width: 9rem;
+		}
+	}
+}
+
+/* JS Event Modifiers  */
+.js-newsletter-form {
+
+	/* Out of the gate, setup default displays */
+	& .newsletter-signup__confirmation,
+	& .newsletter-signup__button-label-fetching,
+	& .js-error {
+		display: none;
+	}
+
+	/* When email error, or during fetching, lock the submit button */
+	&.js-newsletter-form--error-email,
+	&.js-newsletter-form--fetching {
+
+		/* When fetching, update UI */
+		& button[type="submit"] {
+			cursor: default;
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+
+	/* During fetching request */
+	&.js-newsletter-form--fetching {
+
+		/* While fetching, hide the default button label */
+		& .newsletter-signup__button-label-default {
+			display: none;
+		}
+
+		/* While fetching, display the fetching button label */
+		& .newsletter-signup__button-label-fetching {
+			display: block;
+		}
+	}
+
+	/* If ever there are either of the following error classes
+	 * applied to the form, reveal the slot for the form error messaging
+	 * and hide the success messaging slot */
+	&.js-newsletter-form--error,
+	&.js-newsletter-form--error-email {
+
+		& .js-error {
+			display: block;
+		}
+
+		& .newsletter-signup__confirmation {
+			display: block;
+		}
+	}
+
+	& .newsletter-signup__form-message-success {
+		display: none;
+	}
+
+	/* On successful submission, hide the error slot and reveal
+	 * the success form messaging */
+	&.js-newsletter-form--success {
+
+		& .js-error {
+			display: none;
+		}
+
+		& .newsletter-signup__confirmation {
+			display: block;
+		}
+
+		& .newsletter-signup__input {
+			display: none;
+		}
+
+		& .newsletter-signup__button {
+			display: none;
+		}
+
+		& .newsletter-signup__form-message-success {
+			display: block;
+		}
+	}
 }
