@@ -14,6 +14,7 @@ jobs:
             - run: npx chromatic --project-token=eqp57mm70cj --exit-zero-on-changes
             - run: |
                 if [ $CIRCLE_BRANCH = "master" ]
+                  yarn build
                 then
                   yarn release
                 fi
