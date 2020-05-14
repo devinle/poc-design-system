@@ -29,7 +29,7 @@ export const Newsletter = ( props) => {
             <form className="newsletter-signup__form js-newsletter-form" method="post" action="newsletter_subscribe" noValidate>
                 <input type="hidden" name="pardot_segment_id" value={segment}/>
                 <input type="email" name="email" placeholder={placeholder} className="newsletter-signup__input" required/>
-                <button className="newsletter-signup__button button button--brand" type="submit" onClick={action('submit form click')}>
+                <button className="newsletter-signup__button button button--brand" type="submit">
                     <span className="newsletter-signup__button-label-default">{label}</span>
                     <span className="newsletter-signup__button-label-fetching">{loading}</span>
                 </button>
