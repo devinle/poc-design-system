@@ -50,6 +50,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "^5.3.18",
+    "auto": "^9.32.0",
     "chromatic": "^4.0.2",
     "cross-env": "^7.0.2"
   },
