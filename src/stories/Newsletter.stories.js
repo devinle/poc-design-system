@@ -1,6 +1,6 @@
 import React from 'react';
 import { Newsletter } from './Newsletter';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 
 export default {
     title: 'Newsletter',
@@ -10,8 +10,22 @@ export default {
     }
   };
 
+const label = 'Class Modifiers';
+const options = {
+  'none': '',
+  'footer': 'newsletter-signup--footer',
+  'signup': 'newsletter-signup--banner',
+  'social': 'newsletter-signup--social',
+  'sticky': 'newsletter-signup--sticky',
+  'fullbanner': 'newsletter-signup--fullbanner'
+};
+
+const defaultValue = '';
+
+
 export const mytest = () => (
     <Newsletter
+        className={select( label, options, defaultValue )}
         title={text('Title', 'This is a custom title')}
         subtitle={text('Subtitle', 'This is a subtitle')}
         segment={text('Segment ID', '132132')}

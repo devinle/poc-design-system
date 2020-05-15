@@ -15,10 +15,11 @@ export const Newsletter = ( props) => {
         label,
         loading,
         confirmation,
+        className,
     } = props;
 
     return (
-        <div className="newsletter-signup">
+        <div className={`newsletter-signup ${className}`}>
             <div className="newsletter-signup__header">
                 <div className="newsletter-signup__icon">
                     {icon}
@@ -45,6 +46,10 @@ export const Newsletter = ( props) => {
 };
 
 Newsletter.propTypes = {
+    /**
+     Class modifiers
+     */
+    className: PropTypes.string,
     /**
      The icon
      */
